@@ -9,3 +9,24 @@ vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianToday<CR>', { desc = "Open today
 vim.keymap.set('n', '<leader>oq', '<cmd>ObsidianQuickSwitch<CR>', { desc = 'Quick open note' })
 vim.keymap.set('n', '<leader>ob', '<cmd>ObsidianBacklinks<CR>', { desc = 'Show backlinks' })
 vim.keymap.set('n', '<leader>of', '<cmd>ObsidianFollowLink<CR>', { desc = 'Follow [[link]] under cursor' })
+
+-- Habit toggle keymaps
+vim.keymap.set('n', '<leader>hm', function()
+  require('custom.obsidian.habits').toggle_habit 'mental'
+end, { desc = 'Toggle mental habit' })
+
+vim.keymap.set('n', '<leader>hh', function()
+  require('custom.obsidian.habits').toggle_habit 'honest_accountability'
+end, { desc = 'Toggle journal habit' })
+
+vim.keymap.set('n', '<leader>hp', function()
+  require('custom.obsidian.habits').toggle_habit 'physical'
+end, { desc = 'Toggle journal habit' })
+
+vim.keymap.set('n', '<leader>hs', function()
+  require('custom.obsidian.habits').toggle_habit 'spritual'
+end, { desc = 'Toggle journal habit' })
+
+vim.keymap.set('n', '<leader>hj', function()
+  require('custom.obsidian.habits').toggle_habit 'journal'
+end, { desc = 'Toggle journal habit' })
